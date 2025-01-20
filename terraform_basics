@@ -1,0 +1,66 @@
+Terraform - Basics
+
+1. Infrastructure as a Code (IaC)
+2. Provider - AWS, AZURE, GCP
+3. Repetitive , reusable
+
+Dev - 3 Instances - m5.2xlarge
+QA - 3 Instances - m5.2xlarge
+Stage - 3 Instances - m5.8xlarge
+Prod - 6 Instances - m5.16xlarge
+
+Skeleton ccode -- Instance craeetion - values - evn based
+
+instance 1 = acc Dev
+Instance type = m5.2xlarge
+Key Pair = dev
+AMi ID = ami-jkfbvljksbvkfdbv
+
+instance 2 = acc qa
+Instance type = m5.2xlarge
+Key Pair = qa
+AMi ID = ami-jkfbvljksbvkfdbv
+
+
+4. Dependencies
+
+RDS, Ec2 app server, Key Pair, ASG, Load balance, Target groups, IAM User, S3 Bucket, VPC, Subnets, gateways
+
+Sequence of creation = IAM users, VPC, Subnets, Gateways, Key pair, EC2 instance, RDS, Load balancer, ASG, S3 bucket
+
+Terraform = key pair, ec2 instance(include in vpc) have vpc creation
+
+5. Documentation
+
+
+Terraform
+1. Resource block
+2. Data block
+3. Modules
+
+
+resource - create the resource newly
+
+resource "aws_instance" "app_server1" {
+  ami = "value"
+  key_pair = ""
+}
+
+
+data "aws_instance" "app_server1" {
+  
+
+}
+
+Modules
+
+reusable code within terraform
+
+ec2
+VPC
+
+module "ec2_instance_module" {
+  instance_type = [m5.xlarge, m5.2xlarge]
+  key_pair = dev
+}
+
