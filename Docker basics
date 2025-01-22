@@ -1,0 +1,63 @@
+containerised environment
+
+1. Docker
+
+Server - 8g RAm 4vcpu
+Application - Java 
+DB - Oracle
+
+linux - memory allocation - app 4gb db 4gb
+
+Java - 1GB 3 GB - unused
+
+Java, Monitoring agent, ELK
+
+Docker container - java - 1GB, ELK 2Gb , DB 1GB
+
+  Server - layers and each layer is having its own predefine configuration
+
+Dockerfile - which resposible create/install anyting on OS
+
+  docker run
+  u need to pass the -p port number
+
+  jenkins - 8080
+  tomcat - 8081
+  apache - 8443
+
+  Jenkins - CI/CD Tool 
+Integration - AWS, Azire, GCp
+
+Jenkins - Source code - Github, Bitbucket - Plugins
+
+Github repo - Repo1 - deveopers commits - integrate jenkins 
+  Any commits to repo1 --> CI pipleine gets triggered - code -> approve deployment
+
+
+
+Jenkins
+
+  1. Free style
+  2. Pipeline
+  3. Multibranch pipeline
+
+BRANCHING MECHANISM
+
+  different environmnets -- Branching strategies
+
+
+  4 environments - DEV , QA, STAGE , PROD
+
+    REPOSITORY - infrastructure code
+
+    main branch - prod
+    dev branch - dev
+    qa branch
+    stage branch
+  
+
+  
+
+
+  
+  
