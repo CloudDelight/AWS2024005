@@ -64,3 +64,36 @@ module "ec2_instance_module" {
   key_pair = dev
 }
 
+Best Practices
+
+Always create folder with files inside ext .tf
+
+folder
+  - ec2.tf
+  - s3.tf
+  - vpc.tf
+  - provider.tf
+
+Terraform file types include:
+
+main.tf – 
+containing the resource blocks that define the resources to be created in the target cloud platform.
+
+variables.tf – 
+containing the variable declarations used in the resource blocks.
+
+provider.tf – 
+containing the terraform block, s3 backend definition, provider configurations, and aliases.
+
+output.tf – 
+containing the output that needs to be generated on successful completion of “apply” operation.
+
+*.tfvars – 
+containing the environment-specific default values of variables.
+
+
+
+
+
+
+
